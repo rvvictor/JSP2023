@@ -16,80 +16,40 @@
     </head>
     <body>
         <div class="container-lg"><h1><center>Hello World!</center></h1>
+            
             <div class="card">
-  <div class="card-body">
-    
-
+  
+     
+      <h2><% String num =request.getParameter("num"); %></h2>
+        <h1><%=num%></h1>
         <%
+            for (int i = 0; i < Integer.parseInt(num); i++) {
             int x = (int)((Math.random() * 100));
             if(x < 50)
             {
         %>
-        <h1>Es menor a 50</h1>
+        
         <%
             }
             else
             {
        %>
-       <h1>Es mayor o igual a 50</h1>
-       <% 
-           }       
-
-        %>
-        <h1>El numero 1 es: <%=x%></h1>
        
-          </div>
-</div>
-        
-        
-        <div class="card">
-  <div class="card-body">
-
-         <%
-            int r = (int)((Math.random() * 100));
-            if(r < 30)
-            {
-        %>
-        <h1>Es menor a 30</h1>
-        <%
-            }
-            else
-            {
-       %>
-       <h1>Es mayor o igual a 30</h1>
        <% 
            }       
 
         %>
-        <h1>El numero 2 es: <%=r%></h1>
-  </div>
-</div>
+        <h1>El numero <%= i + 1 %> es: <%=x%></h1>
         
-        
-  <div class="card">
-  <div class="card-body">
-    
-        
-         <%
-            int e = (int)((Math.random() * 100));
-            if(e < 24)
-            {
-        %>
-        <h1>Es menor a 24</h1>
+       
+            </div>
         <%
-            }
-            else
-            {
+       }
        %>
-       <h1>Es mayor o igual a 24</h1>
-       <% 
-           }       
+          
 
-        %>
-        <h1>El numero 3 es: <%=e%></h1>
-  </div>
-</div>
-</div>
+             
+      </div>
        
 
     </body>
